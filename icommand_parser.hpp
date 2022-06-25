@@ -4,6 +4,9 @@
 #include<vector>
 #include<string>
 
+namespace cmdline {
+namespace parser {
+
 using parsed_commands = std::vector<std::string>;
 
 class icommand_parser
@@ -17,8 +20,9 @@ public:
     }
 
     virtual void parse() = 0;
-
-    virtual parsed_commands get_commands() = 0;
 };
+
+} // parser
+} // cmdline
 
 #endif // ICOMMAND_PARSER_HPP
